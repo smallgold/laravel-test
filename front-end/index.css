@@ -1,0 +1,285 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('PlayfairDisplay.ttf')  format('truetype');
+}
+
+body {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  color: #6A707B;
+}
+
+.page-contanier {
+  display: flex;
+  position: relative;
+}
+
+.page-left {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  height: 100vh;
+  padding: 96px;
+}
+
+.page-header {
+  position: absolute;
+  top: 96px;
+  left: 96px;
+  right: 96px;
+  background-color: #fff;
+}
+
+.page-logo {
+  display: flex;
+  align-items: center;
+}
+
+.page-logo svg:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+.page-route {
+  float: right;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.page-route a {
+  text-decoration: none;
+  color: #6A707B;
+  padding-left: 24px;
+}
+
+.page-form {
+  width: 488px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.page-form-title {
+  font-family: 'Playfair Display';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px; 
+  color: #131821;
+}
+
+.page-form-cont {
+  padding: 24px 0 32px; 
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-form-input {
+  position: relative;
+  border-left: 4px solid #4066A5;
+}
+
+.page-form-input .icon {
+  position: absolute;
+  top: 24px; 
+  right: 24px;
+  cursor: pointer;
+}
+
+.icon-arrow.submit path {
+  opacity: 1;
+  fill: #4066A5;
+}
+
+.page-form-input .icon-error,
+.page-form-input .error-txt {
+  display: none;
+}
+
+.page-form-input .error-txt {
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 32px;
+  color: #fff;
+  background-color: #F24D4D;
+}
+
+.page-form-input input {
+  display: block;
+  width: 100%;
+  padding: 24px 52px 24px 24px;
+  line-height: 24px;
+  border: 1px solid #E3E3E4;
+  border-left: none;
+  outline: none;
+}
+
+.page-form-input input:focus {
+  border-color: #4066A5;
+}
+
+.page-form-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.page-form-checkbox svg {
+  border-radius: 3px;
+  border: 1px solid #E3E3E4;
+}
+
+.page-form-checkbox.checked svg {
+  border-color: #4066A5;
+  background-color: #4066A5;
+}
+
+.page-form-checkbox span {
+  padding-left: 16px;
+}
+
+.page-form-checkbox a {
+  color: #4066A5;
+}
+
+.page-share {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  gap: 24px;
+  border-top: 1px solid #E3E3E4;
+}
+
+.page-share .icon {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #E3E3E4;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.page-share .icon:hover path {
+  opacity: 1;
+}
+
+.page-share .icon-fb:hover path {
+  fill: #4267B2;
+}
+
+.page-share .icon-ins:hover stop:nth-of-type(1) {
+  stop-color: #4C56D9;
+}
+
+.page-share .icon-ins:hover stop:nth-of-type(2) {
+  stop-color: #C73B95;
+}
+
+.page-share .icon-ins:hover stop:nth-of-type(3) {
+  stop-color: #FFE484;
+}
+
+.page-share .icon-tw:hover path {
+  fill: black;
+}
+
+.page-share .icon-ytb:hover path {
+  fill: #FF0000;
+}
+
+.input-error,
+.input-error input, 
+.input-error input:focus {
+  border-color: #F24D4D;
+}
+
+.input-error .icon-arrow {
+  display: none;
+}
+
+.input-error .icon-error,
+.input-error .error-txt {
+  display: block;
+}
+
+.page-form-success {
+  display: none;
+}
+
+.page-form-success .icon-success {
+  padding-bottom: 24px;
+}
+
+.page-right {
+  flex: 1;
+  height: 100vh;
+  background-image: url('./bg.jpeg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 979px)  {
+  
+}
+
+@media (max-width: 480px) {
+  .page-contanier {
+    display: block;
+  }
+
+  .page-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 24px;
+  }
+
+  .page-logo svg:last-child {
+    display: none;
+  }
+
+  .page-left {
+    padding: 0;
+  }
+
+  .page-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .page-form {
+    width: auto;
+    margin: auto 16px;
+    padding: 24px 32px;
+  }
+
+  .page-form-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px; 
+    letter-spacing: -0.48px;
+  }
+
+  .page-form-cont {
+    padding: 16px 0 24px;
+    font-size: 16px;
+    line-height: 24px; 
+  }
+}
